@@ -26,7 +26,7 @@ void processSerial(){
          calibrateTable();
          break;
        default:
-        if (valString > 47 & valString <58){
+        if (valString > 47 && valString < 58){
            Serial.println(valString);
           movePos(valString - 48);
         }

@@ -81,7 +81,7 @@ void onestepNoE(int speed){
   
    //Check microswitch is not on
   //Move backwards until microswitch trips
-  //Move slowly forwatd until microswitch releases
+  //Move slowly forward until microswitch releases
   //Move to base position
   detachInterrupt(mswitchA);  //stop interupt
    ESTOP = false;  //clear the stop otherwise nothing will move

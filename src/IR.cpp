@@ -31,10 +31,10 @@ void processIR(int IRIN){
        for (int n=0; n<10;n++){
         if (keys[n] == IRIN){
           IRIN = n;
-          exit;
+          break;
         }
        }
-        if (IRIN >= 0 & IRIN <=9){
+        if (IRIN >= 0 && IRIN <=9){
            Serial.println(IRIN);
           movePos(IRIN);
         }

@@ -31,7 +31,7 @@ void getinSetting(){
   if (result == currentPos){
     return;
   }
-   if (result >= 0 & result <=9){
+   if (result >= 0 && result <=9){
            Serial.println(result);
           movePos(result);
         }
