@@ -7,6 +7,7 @@
 #include <Wire.h>
 #include <U8g2lib.h>
 #include <Adafruit_NeoPixel.h>
+#include <IRremote.hpp>
 #include <Preferences.h>
 
 //============ Defines & Macros====================
