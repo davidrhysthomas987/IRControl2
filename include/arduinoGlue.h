@@ -27,6 +27,7 @@
 #define INP1  39
 #define INP2  34
 #define INP3  32
+#define INCONTROL 19
 #define OUTP0  12
 #define OUTP1  13
 #define OUTP2  27

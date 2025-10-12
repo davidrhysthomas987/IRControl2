@@ -81,7 +81,7 @@ void setup() {
    
 
     ESTOP = false;   //flag to record Emergency stop condition   
-IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);
+    //IrReceiver.begin(irReceiverPin, ENABLE_LED_FEEDBACK);
     //flag to say we are in run or calibrate
     runFlag = true;  //true = run false = calibrate
     currentSpd = fastSpd;  //setup speed used later
@@ -92,7 +92,7 @@ IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);
       pinMode(ESTOPPin,INPUT_PULLUP); 
       pinMode(mswitchA, INPUT_PULLUP);
       pinMode(mswitchB, INPUT_PULLUP);
-       //pinMode(sleepPin, OUTPUT);      
+          
    //attachInterrupt(ESTOPPin,EstopInt,FALLING);  //  
    //attachInterrupt(mswitchA,EstopInt,FALLING);  //
    //attachInterrupt(mswitchB,EstopInt,FALLING);  //  
@@ -106,17 +106,17 @@ IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);
    pinMode(INP1,INPUT);
    pinMode(INP2,INPUT);
    pinMode(INP3,INPUT);
-
+   pinMode(INCONTROL,INPUT);
    u8g2.begin();
-   //IrReceiver.begin(irReceiverPin , ENABLE_LED_FEEDBACK);  
+   IrReceiver.begin(irReceiverPin , ENABLE_LED_FEEDBACK);  
 
    //Reterived stored values
-    preferences.begin("store", false);
-    trackJump = preferences.getUInt("trackJump",0);
-    if(trackJump == 0) trackJump = trackJumpBase;
-    stepsToZero = preferences.getUInt("stepsToZero",0);
-    if(stepsToZero == 0) stepsToZero = stepsToZeroBase;
-    preferences.end();
+   // preferences.begin("store", false);
+   // trackJump = preferences.getUInt("trackJump",0);
+   // if(trackJump == 0) trackJump = trackJumpBase;
+   //stepsToZero = preferences.getUInt("stepsToZero",0);
+   // if(stepsToZero == 0) stepsToZero = stepsToZeroBase;
+   // preferences.end();
          Serial.println("Ready");
         
  
