@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include "arduinoGlue.h"
-#include "PinDefinitionsAndMore.h"
+//#include "PinDefinitionsAndMore.h"
 #include <IRremote.hpp> // include the library
 //include <SPI.h>                                  		//-- moved to arduinoGlue.h
 
